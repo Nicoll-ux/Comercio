@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NRC Comestic</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>NRC</h1>
+    </header>
+    <main>
+        <section class="productos">
+            <div class="categories">
+                <button onclick="filterProducts('all')">Todos</button>
+                <button onclick="filterProducts('Pestañina')">Pestañinas</button>
+                <button onclick="filterProducts('Rubor')">Rubores</button>
+                <button onclick="filterProducts('Gloss')">Gloss</button>
+            </div>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito">
+                    <span id="cart-count">0</span>
+                </div>
+            <div class="product-list" id="product-list">
+                <div class="grid-container">
+                    <div class="product-item" data-category="Pestañina">
+                        <img src="https://th.bing.com/th/id/OIP.Daxv1xnXwSR_xp79fK_WZQHaLA?rs=1&pid=ImgDetMain.jpg" alt="Pestañina Sky High">
+                        <h3>Pestañina Sky high</h3>
+                        <p>$45.000</p>
+                        <button onclick="addToCart('Pestañina Sky High', 45000, 'https://th.bing.com/th/id/OIP.Daxv1xnXwSR_xp79fK_WZQHaLA?rs=1&pid=ImgDetMain.jpg' )">Añadir al Carrito</button>
+                    </div>
+                    <div class="product-item" data-category="Pestañina">
+                        <img src="https://th.bing.com/th/id/OIP.k7KLRWKWJqb1jIta36fWcQHaHa?rs=1&pid=ImgDetMain.jpg" alt="Pestañina Maybelline The Falsies Lash Lift Washable Black">
+                        <h3>Pestañina Maybelline The Falsies Lash Lift Washable Black</h3>
+                        <p>$47.000</p>
+                        <button onclick="addToCart('Pestañina Maybelline The Falsies Lash Lift Washable Black', 47000, 'https://th.bing.com/th/id/OIP.k7KLRWKWJqb1jIta36fWcQHaHa?rs=1&pid=ImgDetMain.jpg' )">Añadir al Carrito</button>
+                    </div>
+                    <div class="product-item" data-category="Pestañina">
+                        <img src="https://th.bing.com/th/id/OIP.h4HoSyXJJNXHOmWl2q3HXQHaHa?rs=1&pid=ImgDetMain.jpg" alt="Pestañina Maybelline Falsies Surreal Wtp Very Black">
+                        <h3>Pestañina Maybelline Falsies Surreal Wtp Very Black</h3>
+                        <p>$48.000</p>
+                        <button onclick="addToCart('Pestañina Maybelline Falsies Surreal Wtp Very Black', 48000, 'https://th.bing.com/th/id/OIP.h4HoSyXJJNXHOmWl2q3HXQHaHa?rs=1&pid=ImgDetMain.jpg' )">Añadir al Carrito</button>
+                    </div>
+                    <div class="product-item" data-category="Pestañina">
+                        <img src="https://th.bing.com/th/id/OIP.eT6FLGGPK5z_Jsyap2lOqgHaHa?rs=1&pid=ImgDetMain.jpg" alt="Pestañina Esika Mega Full Size">
+                        <h3>Pestañina Esika Mega Full Size</h3>
+                        <p>$27.000</p>
+                        <button onclick="addToCart('Pestañina Esika Mega Full Size', 27000, 'https://th.bing.com/th/id/OIP.eT6FLGGPK5z_Jsyap2lOqgHaHa?rs=1&pid=ImgDetMain.jpg' )">Añadir al Carrito</button>
+                    </div>
+                    <div class="product-item" data-category="Rubor">
+                        <img src="https://th.bing.com/th/id/OIP.Jb5JPvS3vYS6s-MPu6egXQHaHa?rs=1&pid=ImgDetMain.jpg" alt="Rubor Líquido Ruby Rose Strawberry Pie ">
+                        <h3>Rubor Líquido Ruby Rose Strawberry Pie </h3>
+                        <p>$18.000</p>
+                        <button onclick="addToCart('Rubor Líquido Ruby Rose Strawberry Pie', 18000, 'https://th.bing.com/th/id/OIP.Jb5JPvS3vYS6s-MPu6egXQHaHa?rs=1&pid=ImgDetMain.jpg' )">Añadir al Carrito</button>
+                    </div>
+                        <div class="product-item" data-category="Rubor">
+                        <img src="https://th.bing.com/th/id/OIP.32bUn5wrl26GjMMJ2CrWQAHaHa?rs=1&pid=ImgDetMain.jpg" alt="Rubor Revlon Colorstay Mauvelous003">
+                        <h3>Rubor Revlon Colorstay Mauvelous003</h3>
+                        <p>$47.500</p>
+                        <button onclick="addToCart('Rubor Revlon Colorstay Mauvelous003', 47000, 'https://th.bing.com/th/id/OIP.32bUn5wrl26GjMMJ2CrWQAHaHa?rs=1&pid=ImgDetMain.jpg' )">Añadir al Carrito</button>
+                    </div>
+                    <div class="product-item" data-category="Rubor">
+                        <img src="https://th.bing.com/th/id/OIP.UIO62XITLrfbu4QmHobdhAHaHa?rs=1&pid=ImgDetMain.jpg" alt="Rubor Dior Backstage Rosy Glow - Luminoso natural.">
+                        <h3>Rubor Dior Backstage Rosy Glow - Luminoso natural.</h3>
+                        <p>$235.900</p>
+                        <button onclick="addToCart('Rubor Dior Backstage Rosy Glow - Luminoso natural.', 235900, 'https://th.bing.com/th/id/OIP.UIO62XITLrfbu4QmHobdhAHaHa?rs=1&pid=ImgDetMain.jpg' )">Añadir al Carrito</button>
+                    </div>
+                        <div class="product-item" data-category="Rubor">
+                        <img src="https://th.bing.com/th/id/OIP.O0k2V9lucsBcGzow0m4aswHaHa?rs=1&pid=ImgDetMain.jpg" alt="LES BEIGES EAU DE BLUSH Water Fresh Blush">
+                        <h3>LES BEIGES EAU DE BLUSH Water Fresh Blush</h3>
+                        <p>$285.900</p>
+                        <button onclick="addToCart('LES BEIGES EAU DE BLUSH Water Fresh Blush', 285900, 'https://th.bing.com/th/id/OIP.O0k2V9lucsBcGzow0m4aswHaHa?rs=1&pid=ImgDetMain.jpg' )">Añadir al Carrito</button>
+                    </div>
+                    <div class="product-item" data-category="Gloss">
+                        <img src="https://i5.walmartimages.com/asr/97255a5b-ebf7-4cd0-a2f8-36e7ebffdb1e_1.1bbb3a6eb07792dcd42911624687c765.jpeg" alt="Brillo Maybelline Lip Lifter Gloss">
+                        <h3>Brillo Maybelline Lip Lifter Gloss</h3>
+                        <p>$44.900</p>
+                        <button onclick="addToCart('Brillo Maybelline Lip Lifter Gloss', 44900, 'https://i5.walmartimages.com/asr/97255a5b-ebf7-4cd0-a2f8-36e7ebffdb1e_1.1bbb3a6eb07792dcd42911624687c765.jpeg' )">Añadir al Carrito</button>
+                    </div>
+                    <div class="product-item" data-category="Gloss">
+                        <img src="https://th.bing.com/th/id/OIP.NPqcU1Ddrp9ORbsxsYXjvQHaHa?rs=1&pid=ImgDetMain.jpg" alt="Brillo labial Addict Lip Maximizer Dior">
+                        <h3>Brillo labial Addict Lip Maximizer Dior</h3>
+                        <p>$240.900</p>
+                        <button onclick="addToCart('Brillo labial Addict Lip Maximizer Dior', 240000, 'https://th.bing.com/th/id/OIP.NPqcU1Ddrp9ORbsxsYXjvQHaHa?rs=1&pid=ImgDetMain.jpg' )">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Modal del Carrito -->
+        <div id="cart-modal" class="cart-modal">
+            <div class="cart-content">
+                <span class="close" onclick="toggleCart()">&times;</span>
+                <h2>Carrito de Compras</h2>
+                <ul id="cart-items"></ul>
+                <p>Total: $<span id="cart-total">0</span></p>
+                <button onclick="emptyCart()">Vaciar Carrito</button>
+            </div>
+        </div>
+        <div id="overlay" class="overlay" onclick="toggleCart()"></div>
+        <script src="scripts.js"></script>
+    </main>
+</body>
+</html>
